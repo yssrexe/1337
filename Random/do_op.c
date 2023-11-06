@@ -30,10 +30,7 @@ int ft_atoi(const char *str)
     return result * sign;
 }
 
-int main() {
-    const char* str = "12345";
-    int num = ft_atoi(str);
-    printf("The integer value is: %d\n", num);
-
-    return 0;
+int do_op(int a, int b, char operator)
+{
+    
 }
