@@ -44,6 +44,7 @@ int ft_do_op(int a, int b, char operator)
 
 int main(int argc , char **argv)
 {
+    // to test "*" use "*/" bcuz the compiler read "*" as a command
     if (argc == 4)
     {
         int result = 0;
