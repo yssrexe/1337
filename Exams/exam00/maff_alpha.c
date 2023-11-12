@@ -9,8 +9,8 @@ int main(void)
     {
         write(1, &c1, 1);
         write(1, &c2, 1);
-        c1 = c1 + 2;
-        c2 = c2 + 2;
+        c1 += 2;
+        c2 += 2;
     }
     write(1, "\n", 1);
 }
