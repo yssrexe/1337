@@ -1,23 +1,26 @@
 #include <unistd.h>
 
-int main(int argc, char **argv)
+int main(int arc, char  **arv)
 {
     int i = 0;
 
-    if (argc == 2)
+    if (arc == 2)
     {
-        while (argv[1][i])
+        while (arv[1][i])
         {
-            if (argv[1][i] == 97)
+            if (arv[1][i] == 97)
             {
                 write(1, "a", 1);
             }
-        i++;
+            
+            i++;
         }
+        
     }
-    else if(argc == 1)
+    else
     {
         write(1, "a", 1);
     }
     write(1, "\n", 1);
+    
 }
