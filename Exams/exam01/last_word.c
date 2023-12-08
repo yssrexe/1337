@@ -3,42 +3,37 @@
 int ft_strlen(char *str)
 {
     int i = 0;
-    while (str[i])
+    while(str[i])
         i++;
-    return (i);
+    return i;
 }
 
-void last_world(char *str)
+void last_word(char *str)
 {
-    int len = ft_strlen(str) - 1;
+    int i = ft_strlen(str) - 1;
 
-    while (str[len] == '\t' || str[len] == 32)
-        len--;
+    while (str[i] == '\t' || str[i] == ' ')
+        i--;
     
-    while (len > 0)
+    while (i > 0)
     {
-        if (str[len] == '\t' || str[len] == 32)
+        if (str[i] == '\t' || str[i] == ' ')
             break;
-        len--;
+        i--;
     }
-    len++;
-
-    while ( str[len] != '\0' && (str[len] != '\t' || str[len] != 32))
+    i++;
+    while (str[i] && (str[i] != '\t' || str[i] != ' '))
     {
-        write(1, &str[len], 1);
-        len++;
+        write(1, &str[i], 1);
+        i++;
     }
 }
 
-
-
-int main(int arc, char **arv)
+int main(int ac, char **av)
 {
-    int i = 0;
-
-    if (arc == 2)
+    if (ac == 2)
     {
-        last_world(arv[1]);
+        last_word(av[1]);
     }
     write(1, "\n", 1);
 }
