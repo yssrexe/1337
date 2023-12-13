@@ -1,17 +1,20 @@
 #include <unistd.h>
 
-int main(int arc, char **arv)
+void print_param(char *str)
 {
     int i = 0;
-
-    if (arc >= 2)
+    while (str[i])
     {
-        int num = arc - 1;
-        while (arv[num][i])
-        {
-            write(1, &arv[num][i], 1);
-            i++;
-        }
+        write(1, &str[i], 1);
+        i++;
+    }
+}    
+int main(int ac, char **av)
+{
+    int i = ac -1;
+    if (ac >= 2)
+    {
+        print_param(av[i]);
     }
     write(1, "\n", 1);
 }
